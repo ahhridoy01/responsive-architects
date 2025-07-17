@@ -2,80 +2,99 @@
 
 
 .work-sans-font {
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
 /* Shared style */
-.display-flex{
+.display-flex {
     display: flex;
 }
-.bg-color{
+
+.bg-color {
     background-color: rgba(255, 144, 14, 0.1);
 }
-.dark-1{
+
+.dark-1 {
     color: #131313;
 }
-.dark-3{
+
+.dark-3 {
     color: #727272;
 }
-.dark-2{
+
+.dark-2 {
     color: #424242;
 }
-.orange{
+
+.orange {
     color: #FF900E;
 }
+
 /* nav styles */
-.nav-container{
+.nav-container {
     justify-content: space-between;
     align-items: center;
 }
-.nav-item{
+
+.nav-item {
     list-style: none;
 }
-.nav-link a{
+
+.nav-link a {
     color: #424242;
     text-decoration: none;
     margin-right: 30px;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.12rem;
 }
-.nav-title{
+
+.nav-title {
     font-weight: 700;
     font-size: 2.8rem;
 }
-.nav-container, .banner{
+
+.nav-container,
+.banner {
     max-width: 1440px;
     margin: 0 auto;
 }
-main{
+
+main {
     max-width: 1440px;
     margin: 0 auto;
 }
-main> section{
+
+main>section {
     margin-top: 130px;
 }
+
 /* banner design */
 
-.banner-title{
+.banner-title {
     font-weight: 700;
     font-size: 4rem;
 }
-.banner-description{
+
+.banner-description {
     font-weight: 400;
     font-size: 1rem;
 }
-.banner-content{
+
+.banner-content {
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 20px;
 }
-.banner-img{
+
+.banner-img {
     max-width: 100%;
 }
-.btn-all{
+
+.btn-all {
     width: 180px;
     height: 64px;
     background-color: #FF900E;
@@ -85,51 +104,136 @@ main> section{
     border-radius: 8px;
     padding: 21px 25px;
     border: none;
+    cursor: pointer;
 }
 
-@media screen and (max-width:576px){
-    .nav-item{
+.btn-all:hover {
+    background: linear-gradient(45deg, rgb(255, 167, 38));
+}
+
+@media screen and (max-width:576px) {
+    .nav-item {
         flex-direction: column;
     }
-    .nav-link{
+
+    .nav-link {
         margin-top: 10px;
     }
 }
 
 /* architects team section */
-.team-img{
+.team-img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
-.team{
+
+.team {
     align-items: center;
 }
-.team-content{
+
+.team-content {
     max-width: 530px;
     margin-left: 70px;
 }
 
-@media screen and (max-width:576px){
-    .team{
+@media screen and (max-width:576px) {
+    .team {
         flex-direction: column;
     }
-    .team-img{
+
+    .team-img {
         grid-template-columns: repeat(1, 1fr);
     }
-    .team-content{
+
+    .team-content {
         margin: 0 auto;
         padding: 30px;
     }
 }
 
+/* Feature section */
+.feature-title {
+    border-left: 10px solid #FF900E;
+    padding-left: 10px;
+}
+
+.feature-card {
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+}
+
+.feature-card h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.feature-container {
+    display: flex;
+    gap: 140px;
+}
+
+.feature-button {
+    width: 340px;
+    height: 200px;
+    background-color: #FF900E;
+    border-radius: 8px;
+    border: none;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#year {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+#ex {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width:576px) {
+    .feature-container {
+        flex-direction: column;
+    }
+
+    .feature-img {
+        max-width: 100%;
+    }
+
+    .feature-head {
+        text-align: center;
+    }
+
+    .feature-title {
+        font-size: 2.2rem;
+        border-left: 10px solid #FF900E;
+        padding-left: 7px;
+        margin: auto 10px;
+    }
+
+    .feature-button {
+        padding: 10px;
+        margin-top: -80px;
+        margin-right: auto;
+        margin-left: 30px;
+        margin-bottom: auto;
+        height: 150px;
+    }
+}
+
 /* facts section */
-.facts-container{
+.facts-container {
     display: grid;
     gap: 80px;
-    grid-template-columns: repeat(4 ,1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
-.fact-card{
+
+.fact-card {
     margin-top: 20px;
     justify-content: center;
     align-items: center;
@@ -140,49 +244,57 @@ main> section{
     border-radius: 8px;
     box-shadow: 0px 0px 5px .1px;
 }
-.fact-name{
+
+.fact-name {
     margin: 5px;
     font-weight: 600;
     font-size: 2.8rem;
 }
-.fact-number{
+
+.fact-number {
     margin-top: 10px;
     font-weight: 600;
     font-size: 1.25rem;
 }
-.fact-content{
+
+.fact-content {
     margin: 0 auto;
 }
-@media screen and (max-width:576px){
-    .facts-container{
+
+@media screen and (max-width:576px) {
+    .facts-container {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
     }
-    .fact-content{
+
+    .fact-content {
         text-align: center;
     }
 }
 
 /* Sponsor section */
 
-.sponsor-img{
+.sponsor-img {
     display: grid;
-    grid-template-columns: repeat(5 ,1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
-.sponsor-img img{
+
+.sponsor-img img {
     filter: grayscale(100%);
 }
-.sponsor-info{
+
+.sponsor-info {
     max-width: 540px;
     margin: 50px auto;
     text-align: center;
 }
-.sponsor-title{
+
+.sponsor-title {
     margin-bottom: 24px;
 }
 
-@media screen and (max-width:576px){
-    .sponsor-img{
+@media screen and (max-width:576px) {
+    .sponsor-img {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
         justify-items: center;
