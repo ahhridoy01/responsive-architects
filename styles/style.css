@@ -119,6 +119,9 @@ main>section {
     .nav-link {
         margin-top: 10px;
     }
+    .nav-title{
+        font-size: 2rem;
+    }
 }
 
 /* architects team section */
