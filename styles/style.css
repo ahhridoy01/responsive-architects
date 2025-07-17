@@ -114,8 +114,8 @@ main>section {
 @media screen and (max-width:576px) {
     .nav-item {
         flex-direction: column;
+        padding: 10px;
     }
-
     .nav-link {
         margin-top: 10px;
     }
